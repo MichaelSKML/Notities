@@ -1,0 +1,65 @@
+YC notes 22 maart 2024
+
+Product Backlog (USER STORIES)
+    Ik als <ROL>, als ik <EVENT> zie ik <RESULTAAT>
+
+    YCR001 Ik als USER MET ACCOUNT, als ik naar de homepage (index.html) ga, zie ik een formulier waarmee ik een recept kan aanmaken
+
+    YCR002 Ik als ANONIEME USER, als ik naar de HOMEPAGE (index.html) ga, zie ik een overzicht van alle recepten in de database
+
+    YCR003 Ik als ANONIEME USER als ik op registreren klik ga ik naar een pagina (registreren.html) waar ik een formulier zie om me aan te melden
+
+    YCR004 Ik als ANONIEME USER als ik op een RECEPT IN DE LIJST (index.html), ga ik naar (recept.html) en zie ik daar de details van het recept. 
+
+    YCR005 Ik als USER MET ACCOUNT als ik op een RECEPT IN DE LIJST (index.html), ga ik naar (recept.html) en zie ik daar de details van het recept. 
+
+    YCR006 Ik als USER MET ACCOUNT, als ik naar de pagina  (recept.html) ga, zie ik een formulier (review.html) om een review achter te laten
+
+(homepage > index.html)
+
+    
+KLASSENDIAGRAM
+
+RECEPT - Fields
+    RECEPT
+    id 
+    naam
+    beschrijving
+    ingredienten
+    aantalsterren
+    afbeelding
+    moeilijkheidsgraad
+    delenknop
+    tag (zoekwoord)
+    reviews 
+    bereidingstijd
+    dietvoorkeuren
+
+Normaliseren: kijken of een field een aparte klas moet zijn. 
+
+**  RECEPT
+    id: int
+    naam: str (spaghetti)
+    beschrijving: str (slierten en saus)
+    ingredienten: List<ingredient>
+    aantalsterren: int (3)
+    afbeelding: str (spaghetti.jpg)
+    moeilijkheidsgraad: int (5)
+    delenknop: str ()
+    tag (zoekwoord): list<TAG>
+    reviews: list<REVIEW>
+    bereidingstijd: int (35)
+    dietvoorkeuren: str (vlees)
+
+   ** ingredienten: has relatie (one to many), string (tomaat)
+
+   ** tag: has relatie, many to many
+
+   ** review: has relatie, one to many 
+
+
+Wireframes - tekenen van paginas van applicatie
+
+---------------------------------------------------------
+(FLASK installeren) 
+
