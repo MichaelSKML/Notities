@@ -1,0 +1,135 @@
+YC - 19 maart 2024
+
+libraries: codes van een andere programmeur die je kan inpluggen
+
+import pandas
+
+inhoudvanfile = pandas.read_csv("Pokemon.csv")
+
+print(inhoudvanfile)
+
+gezochte_pokemon = input("Welke pokemon zoek je?")
+
+gevonden = 'nee'
+
+for pokemonnaam in inhoudvanfile["Name"]:
+    if pokemonnaam == gezochte_pokemon:
+        gevonden = 'ja'
+
+if gevonden == 'nee':
+    print("NIET GEVONDEN!!!!")
+else:
+    print("WEL GEVONDEN")
+    
+# probeer een pokemon te vinden of hij bestaat
+# probeer de namen van de pokemons in Type 1 te tonen na invoer
+# vind uit of de gemiddelde attack van Fire groter is dan die die van Ghost
+# bedenk zelf een intersante onderzoeksvraag en programmeer die
+
+opdracht 2
+
+import pandas
+
+inhoudvanfile = pandas.read_csv("Pokemon.csv")
+
+print(inhoudvanfile)
+invoer = input("Op welk type wil je zoeken?")
+for teller, pokemon in inhoudvanfile.iterrows():
+    if pokemon["Type 1"] == invoer:
+        print(pokemon["Name"], " - " ,pokemon["Type 1"])
+
+opdracht 3
+
+import pandas
+
+inhoudvanfile = pandas.read_csv("Pokemon.csv")
+
+aantalfire = 0
+totaalfire = 0
+
+aantalghost = 0
+totaalghost = 0
+
+for teller, pokemon in inhoudvanfile.iterrows():
+    if pokemon["Type 1"] == "Fire":
+        aantalfire += 1
+        totaalfire += pokemon["Attack"]
+    if pokemon["Type 1"] == "Ghost":
+        aantalghost += 1
+        totaalghost += pokemon["Attack"]
+
+
+print("aantalfire:", aantalfire)
+print("totaalfire:", totaalfire)
+print("aantalghost:", aantalghost)
+print("totaalghost:", totaalghost)
+print("fire: ", totaalfire/aantalfire)
+print("ghost: ", totaalghost/aantalghost)
+
+if totaalfire/aantalfire  <  totaalghost/aantalghost :
+    print("GHOST IS HET STERKSTE")
+else:
+    print("FIRE IS HET STERKSTE")
+
+---------------------------------------------------------
+***DATABASE***
+
+SQL: taal om informatie uit database te halen 
+  Een Record set is wat je met SQL uit een database haalt
+    Je kan for loopen over een record set 
+
+
+------------------------
+twee repositories opdracht 
+
+html en python 
+
+
+-----------
+Opdracht python backend 
+
+Opdracht frontend
+
+git repos gemaakt 
+
+---------------
+**OPDRACHT**
+
+DATABASE -- SQL -- PYTHON -- json (javascript object notatie) -- HTML 
+
+1. Product backlog
+  - user stories maken
+
+2. Sprint planning 
+  - wie gaat wat doen (scope)
+
+3. Requirements opstellen UML maken
+  - Use Case diagram
+
+4. Alle records uit een database opvragen en tonen
+    - In python
+
+5.    - In HTML via python 
+
+6. Wireframes (hoe moet de applicatie eruit zien)
+
+7. StandUps - taken verdelen
+
+8. Huisstyle: lettertype afbeeldingen - CSS
+
+9. Mooie demo-data maken
+
+10. Code conventies - conventies algemene zin 
+
+11. In de database aanmaken van Classdiagram Tabellen 
+
+------------------------
+backend
+
+app.py moet er ook in (al aangemaakt door Felix)
+
+in app.py met flask werken (applicatie maken)
+  flask run (pip install flask als flask nog niet is geinstalleerd)
+
+  app.py voorzicht want wss merge conflicten
+    kijken of gegenereerde bestanden van flask in ignore moeten 

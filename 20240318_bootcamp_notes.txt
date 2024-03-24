@@ -1,0 +1,114 @@
+YC notes 18 maart 2024
+
+25 maart 10u eindpresentatie van gen februari 
+
+---------------------------------
+
+webshop app of recepten delen app 
+
+UML - unified modeling language
+
+modelling maturity level 
+
+lv1: idee alleen in hoofd
+lv5: perfecte modelleertaal niet gevonden
+
+*Fases van systeemontwikkeling
+  concept:
+  analyse: wat hebben we nodig, functionaliteiten
+  ontwerp: hoe moeten zaken met elkaar communiceren, architectuur
+  implementatie: coderen
+
+- conceptuele fase 
+  gebruikers georienteerd, wat willen we gaan doen met de app. communicatie met gebruiker, opdrachtgever, ontwikkelaar
+  focus op functionele systeemeisen
+  - use-case diagram
+      stickfigure: een actor kan klant zijn, iemand die een rol speelt, maar ook een systeem
+      ovaalbubble: actie/use case
+      verbinding zegt iets over verplichtingen/eisen 
+        extend/include zegt iets over iets dat gedaan MOEt worden, of facultatief
+
+      use case requirements  
+
+    bij main en alternate course behaal je resultaat wel, maar bij exception niet
+      1 briefje van 50, andere briefjes, geen saldo 
+
+  multipliciteit/cardinaliteit: relatie van een kenmerk toz een ander kenmerk
+    one to one: bijv. persoon en bsn 
+    one to many: 1 vliegtuig meerdere passagiers
+    many to many: trainees vacatures
+
+klasse (rechthoek): groep met kenmerken, zitten objecten in met waardes van de kenmerken
+  kenmerken hebben types (strings bijv. )
+
+  overerving: is a - relatie
+
+  has a - relatie : heeft iets maar is het niet
+
+  dichte diamond: compositie, kan niet bestaan zonder x, sterkere afhankelijkheid 
+  open diamond: aggregratie, abritrair, zegt iets over de afhankelijkheid, wat vager 
+
+-----------------------------------
+Recepten applicatie 
+
+Classes: welke classes, welke kenmerken 
+
+No template for recipes. Users can just make whatever for however # of people
+Needs clear references to webshop (e.g. in tools in recipes)
+Focus of webshop: just tools.
+Data: dob, email, gender id, interest in tools (so bbq pref etc), location
+Reviews: Optional to leave text and images
+Review: Possibility to leave it as anonymous/change name.
+Review: Mandatory: rating
+As Anonymous User: just read, no create. So also no reviews if no account!
+Recipe tags for filtering (difficulty/time, type, tool, rating, meat/fish/vega etc.)
+Difficulty = time taken (15min is easy, 1.5h is hard, etc)
+Bookmark/favourite
+
+recepten toevoegen aan favorieten
+
+-------------------------
+wireframe: visuele weergave, laat iets zien over layout en functionaliteit 
+  aan opdrachtgever laten zien 
+  aan programmeurs laten zien 
+
+  fidelity: low of high, hoe gedetailleerd is je model 
+
+---------------------
+MAMP voor mac
+XAMPP voor windows
+
+----------------------
+SQL - structured query language 
+
+Database: een verzameling aan data en een manier om de data te manipuleren
+tabel: klassen, objecten, waarden 
+persistente data in een database: overleeft een reboot (in tegenstelling tot cookies)
+
+- Elk object in database heeft een id
+- ID: primary key 
+
+- insert into: create object 
+
+tip: in plain notitieblokje query kopieren en plakken 
+  soms wordt het in app niet opgeslagen 
+
+INSERT INTO `autos` (`ID`, `merk`, `bouwjaar`, `kenteken`, `kleur`) VALUES (NULL, 'Toyota', '2005', 'LD-22-12', 'zwart')
+
+
+INSERT INTO `autos` (`ID`, `merk`, `bouwjaar`, `kenteken`, `kleur`) VALUES (NULL, 'Toyota', '2005', 'LD-22-12', 'zwart'), (NULL, 'Mercedes', '2012', 'FT-23-32', 'zilver'), (NULL, 'BMW', '2012', 'FR-23-32', 'rood'), (NULL, 'Opel', '1995', 'RT-13-32', 'blauw'), (NULL, 'Citroen', '2019', 'WT-10-11', 'zwart'), (NULL, 'Fiat', '1993', 'PR-78-LX', 'zilver'), (NULL, 'Peugeot', '2000', 'ML-13-XX', 'rood'), (NULL, 'Opel', '2012', 'VT-LX-32', 'geel'), (NULL, 'Mercedes', '2011', 'MX-90-KL', 'blauw'), (NULL, 'BMW', '2016', 'YL-10-00', 'groen');
+INSERT INTO `autos` (`ID`, `merk`, `bouwjaar`, `kenteken`, `kleur`) VALUES (NULL, 'KIA', '1998', 'KI-56-98', 'zwart'), (NULL, 'Citroen', '2019', 'KI-20-19', 'zilver'), (NULL, 'BMW', '2023', 'BM-34-45', 'rood'), (NULL, 'Mercedes', '2024', 'MK-34-72', 'oranje'), (NULL, 'Porsche', '2019', 'PG-19-23', 'rood'); 
+
+select * from `Autos` where kleur='rood';
+select merk='' from `Autos` where kleur='rood';
+
+ORDER BY bouwjaar ASC;
+
+UPDATE en CREATE altijd WHERE ook erbij doen 
+
+primary key en foreign key: zorgen voor relaties onderling 
+  primary key identifier: uniek 
+  foreign key: niet uniek, is een primary key vanuit een andere tabel 
+
+
+select * from autos left join eigenaren on eigenaren.id = eigenaar_id where eigenaren.id=4

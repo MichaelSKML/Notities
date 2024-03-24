@@ -1,0 +1,233 @@
+Notities klassikale lesdag
+
+8 maart 2024 - Discord
+
+HTML:
+
+Eerste pagina altijd index.html
+
+- HTML tag in eerste regel (site weet dat het HTML5 is)
+
+- tags: < >
+
+- openingstag van site <html> sluitende </html>
+
+- <head> meta data
+
+- <body> : dit wordt getoond in de webpagina
+
+- <br>: nieuwe regel (white space wordt niet getoond anders, niet significant)
+
+- <hr>: horizontale streep (ruler)
+
+- <b>: bold </br>
+
+- <textarea>: veld voor tekst invoeren </textarea>
+  attribute readonly="readonly", dan kan je niet typen erin 
+
+- <a>: anchor, voor een hyperlink <a href="link"> tekst van hyperlink </a>
+
+- <div>: divider, een blok in de pagina
+
+- <table>, <tr> (row), <td> (detail), column
+
+- <script> kan je java in doen
+
+- <style>
+
+- <details>, openklappen text
+
+- <dl> list <dt> term <dd> definition
+
+- drie items in lijst is aesthetisch voor demo's
+
+- h1 tm h6: grootte van header
+
+- <ol> ordened list, <li> list item. <ul> unordened list. <ol type="i"> voor type markers in lijst. i is bijvoorbeeld romeinse cijfers
+
+- <select name="country">, <option value="nl"> </>. Voor een selectbox
+
+- x<sup>2</sup> tot de macht (superscript of subscript), <sub>
+
+- attributen zeggen iets over een tag, gaat in een tag. 
+  <tag attribute="iets"> </tag> (key="value")
+    als key hetzelfde is als value, (readonly bijv.), dan hoef je alleen readonly te zetten ipv ="readonly" ook
+-------------------------------------------
+Styling voor html
+
+in html kan je in style tag de body (of aparte dingen in body zoals een textarea, div) stylen 
+  tag {key: value;}
+    {font-size: 23px}
+
+als je aparte dingen wil stylen, kan je class in een div zetten, het een naam geven en in style de .class apart nemen om te stylen
+  = class selector 
+  <div class="naam"> 
+  je kan div + class ook een id geven. id="iets"
+    in style verwijzen met #id 
+
+----------------------------------------
+CSS - stylesheet (.css)
+  in html file in <head>
+
+  <link rel="stylesheet" href="style.css" />
+
+- Pseudo-classes: als je over een div hovert met cursor, andere Styling
+    div (of iets anders):hover {styling }
+
+---------------------------------------
+Javascript
+
+- html dynamisch maken
+- <script src="main.js"></script>
+- een functie kan je aanroepen wanneer je zelf wil
+  conventie is dat script ref in de <head> wordt opgenomen
+
+  javascript.js
+    function hello(árgument) { 
+        alert("welkom op mijn pagina" +argument)
+    }    --> argument optioneel
+
+later in de pagina kan je functie aanroepen (kan meerdere keren)
+ <script>
+  hello(argument)
+  </script>
+
+console.log -> print argument in console in brongegevens, gaat niet naar weergave webpagina zelf
+
+console.error
+console.warning
+
+return statement in functies
+
+in brongegevens, sources: je kan een breakpoint inzetten (klikken op een regel), dan stopt die regel
+
+colsole.log(typeof (other));  om te kijken wat voor type waarde is van functie 
+
+parseInt(other); maakt van string "cijfer" een integer/number
+    var weleencijfer = parseInt(other);
+
+    + voor een gedefinieerde variabele, zet het om in een number
+  
+  var of let definieren:
+    var blijft gedefinieerd door hele code, let blijft in de scope {} gedefinieerd en niet buiten de scope
+      let is beter 
+  
+      const is basically let maar blijft constant 
+  
+events/ event handler: er gebeurt iets als er iets getriggered wordt
+-----------
+link naar sourcecode van vandaag:
+https://github.com/rloman/html-2024
+let op: develop branch (default)
+-------------------------------------------------
+if else in javascript
+
+function ifElseDemo(leeftijd) {
+
+  if(leeftijd < 20) {
+    console.log("U bent nog te jong");
+
+  } else {
+    console.log("U bent op leeftijd");
+    )
+  }
+
+}
+
+&& is de logische "and", || is de logische "of"
+----------------------
+basic for loop
+
+for(initialisatie;conditie;increment)
+
+i++ is hetzelfde als i = i+1
+i-- is hetzelfde als i = i-1
+
+for (let i = 0; i < 10; 1++) {
+  console.log(i)
+
+}
+
+---------------------------------------
+Array 
+  een array in JS maak je met [], arrays zijn indexed based, eerste element heeft index 0
+
+function demoArray() {
+
+  let numbers = [8, 1, 2, 34, 55, 105, 22, 19];
+
+  console.log(numbers[0]);
+  console.assert(numbers[2] == 12) -> zegt niks als het goed is, als het fout is, dan geeft ie assertion failed
+    -> assert goed voor testen 
+
+}
+
+Twee manieren om over de array te lopen
+  - for (let i = 0; i < numbers.length; i++) {
+      console.log("Het element op adres: "+i+": + numbers [i])
+  }
+
+  - for each 
+
+    for(let numbers of numbers) {
+      console.log("Het number is: "+number)
+
+      Een struikelblok -> verschil tussen of en in. of geeft waarde aan, in geeft index weer.
+      for (let number in numbers) {
+        console.log("Het number ofzo is nu: "+number)
+      }
+    }
+
+Maak een array van namen en loop eroverheen met een basic loop en foreach loop 
+
+
+let namen = ["jan", "peter", "willem", "kees']
+
+for (let i = 0; i < namen.length; i++) {
+  console.log("naam op plek: "+i+": + namen [i])
+}
+
+for(let namen of namen) {
+  console.log("de naam is: "+naam)
+}
+
+
+--------------------------------------------------------
+loopen over een string kan ook 
+
+let string = "string"
+ for loop
+-------------------------
+image
+
+<img scr="link naar plaatje" id="image1">
+
+<button value="change" onclick="changeimage();">Change</button>
+
+
+
+JS
+
+function changeImage() {
+  let img = document.getElementByID("image1");
+  if(img.src === "traineeships.jpg") {
+      img.src = "joost.webp"
+  }
+}
+
+kan ook ends with gebruiken om te togglen tussen images 
+
+--------------------------------------------------------
+mooie sites om te lezen:
+https://javascript.info/
+
+https://eloquentjavascript.net/
+
+Link voor de komende dagen om te oefenen met HTML5, css3 en js: =>
+http://lms.codefounders.nl/lessonModuleDetail/62(sidebar:tags/html)
+
+Herstel: samenvattende movie van  vandaag! =>
+http://lms.codefounders.nl/lessonModuleDetail/62(sidebar:tags/html)
+
+Hieronder voor de miniopdrachten om te oefenen: =>
+https://0111.nl/programmayc/miniopdrachtenhtmlcssjs.html

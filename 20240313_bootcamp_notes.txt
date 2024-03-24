@@ -1,0 +1,214 @@
+YC notes 13 maart 2024
+
+Object oriented programming
+
+- Scripts 
+
+start en eind, boven naar beneden
+
+Java eerste taal die OOP toepast
+
+OOP:
+  - structuur
+  - werk je met objecten
+  - blauwdruk 
+
+Van alles kan je een object
+
+Class 
+  - blauwdruk
+
+  public class person {
+
+  } 
+
+  we maken hier een person class mee maken  
+
+  public: is een access modifier
+    interne beveiliging van een applicatie
+    andere classes kan dit aanroepen
+  
+  class: is een keyword 
+
+  person: is een classname/naam van class 
+    kan van alles zijn, person, product, huis etc
+  
+  {} is een code block
+    daar zet je code in 
+
+  Class name met hoofdletter (stricte richtlijn)
+
+Properties (synoniem: attribute/field)
+  - vooraf properties omschrijven (voor het runnen)
+  - horen bij een class 
+  - hebben een data type (nummer, string, etc)
+      tekst -> "String" (met een hoofdletter, geeft aan dat het een class is, kan bewerkt worden)
+      getallen (zes soorten) -> int
+      waar/niet waar (true/false) -> boolean  
+  - hebben ook een naam (bijv. titel bij een film)
+
+  Binnen curly brackets van class properties aanmaken
+    public String name ; 
+
+    public: access modifier
+    String: data type
+    name: property name 
+    ; is ook belangrijk 
+
+    synoniem: meerdere woorden met betekenis
+    homoniem: een woord met meerdere betekenissen
+
+class -> object
+  class: blauwdruk, 1 van elk, structuur, nog niet tastbaar
+
+  object: data, oneindig
+
+  Object aanmaken
+    new Person(); 
+
+    new: keyword 
+    Person: class name 
+    (): arguments 
+
+  garbage collection: opruimen niet gebruikte variabelen
+
+  Person person1 = new Person(); 
+
+  Person person1: aanmaken van een variable (declaration)
+  person1 is variabele, Person is datatype 
+  new Person(); : object creation 
+  = assignment 
+
+
+nieuwe class, 3 properties, in Application maak 2 objecten aan en vul in 
+
+**Methods 
+  - in een class 
+  - actie wat je kan uitvoeren
+  - heeft een naam 
+
+  public void printdetails(){
+
+
+  }
+
+  public: access modifier
+  void: return type 
+  printdetails: method name 
+  (): arguments 
+
+S.O.C. : separation of concern.
+  zoals methods in Class zetten ipv applicatie
+
+D.R.Y. : dont repeat yourself 
+
+// maak 3 methods: 2 methods print een property, 1 method die print alle properties
+
+**Parameter/arguments 
+  - informatie meegeven aan een method.
+
+declaration (in Class)
+  public void createcoffee(int amount)
+
+  int: datatype
+  amount: parameter name 
+
+  meerdere parameters kunnen in (), gescheiden met komma 
+
+
+aanroepen in App: createcoffee(int, string); 
+
+parameter alleen toegankelijk in codeblock {}, niet daar buiten.
+
+// in eigen class maak 1 methode om 1 property in te vullen en 1 methode om meerdere props in te vullen 
+    roep beide aan in application 
+
+
+**Return type
+    - Methode heeft 1 return type 
+    - any type als return type (void, int, etc)
+    - iets teruggeven als return type via return (verplicht als return type niet void is)
+    
+    public int getAge() {
+
+    }  -> declaration, in Class 
+
+    person1.getAge(); -> in application 
+
+    int personAge = person1.getAge(); variabele 
+
+// maak een methode die de samenvatting als string teruggeeft 
+
+**Class bestaat uit drie onderdelen (bij OOP)
+  - properties
+  - methods
+  - constructors 
+
+** Constructor 
+    - snel een object aan te maken 
+    - informatie/methods afdwingen (sure hit effect)
+    - parameters snel invullen
+
+  in class:
+
+  public Person() {
+
+  }
+
+  public: access modifier
+  Person: class name 
+  (): arguments 
+  {}: code block 
+
+// maak in eigen class een constructor met alle properties als parameter en vul alle properties 
+    maak ook een lege constructor 
+
+**Access modifier 
+    - public: alle classes mogen dit aanroepen
+    - private: enkel binnen de huidige class 
+    - protected: inheritence
+
+  Encapsulation: afschermen property in Class, kan alleen binnen class aangeroepen worden
+    properties en methodes kunnen apart public of private zijn 
+
+    methode kan dan wel binnen class een afgeschermde property aanroepen
+      methodes heeft een codeblock dus kan checks code erin doen, voor beveiliging
+
+      this. huidige object waar code op uitgevoerd wordt
+        onderscheid tussen property en nieuwe parameter
+          this. op oude property 
+
+** Inheritance
+    - gedeelde code/property van superclass doorgeven naar subclasses
+    - minder code nodig in totaal
+
+    keyword: extends 
+
+    public class Dog extends Animal {
+
+
+    }
+
+    dog (sub) is verlengstuk van animal (super)
+    "dog is van het type Animal"
+        wordt is-relatie genoemd (-> inheritance)
+
+        dog heeft een tail 
+          wordt een has-relatie genoemd. 
+
+// In animal, voeg 2 properties toe, Maak 2 extra subclasses, in Application maak van andere dieren 1 van + vul properties in 
+
+** Abstract  
+
+  - voorkomen dat classes aangemaakt kunnen worden 
+  - alleen van toepassing op huidige class 
+  - abstract methods 
+      method zonder body 
+      alle subclasses moeten abstract methods hanteren
+      abstract methods alleen in abstract classes
+
+      public abstract class Animal {}
+        abstract is een keywordt dat de class abstract maakt 
+      
+
+      
