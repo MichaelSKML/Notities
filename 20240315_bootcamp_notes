@@ -1,0 +1,204 @@
+YC notes - 15 maart 2024
+
+Programmeur: 2 benen
+    - Syntax vaardigheid
+    - Bibliotheekbekendheid
+
+in HTML: een tag (in code) veroorzaakt een element (in browser, is een interpretatie van tag)
+
+attribuut: in openingstag, heeft een key value en een waarde 
+
+Event: Gebeurtenis
+eventhandler: reactie op gebeurtenis
+event attribuut, daarna javascript code als reactie
+
+<style></style>: css syntax hierin
+<script></script>: javascript syntax hierin
+
+selector (in css): om een element te selecteren voor styling in css
+    Selector{
+            Key:value;
+
+    }
+
+    textarea{
+            background-color: green;
+            color: yellow;
+    }
+
+Functie: stukje code in JS die aanroepbaar 
+    hebben parentheses ()
+    function eigennaam(){
+        alert("dit is in mijn functie")
+    }
+bovenstaande is een declaratie. Moet nog aangeroepen worden om uitgevoerd te worden.
+
+<h1 onclick="eigennaam()">
+
+variabele: stukje in geheugen met een naam om dingen in te bewaren
+let naamvariabele = 5; 
+var naamvariabele = 5;
+
+let vs var : zijn hetzelfde 
+
+const: constant, als dit een waarde heeft, dan kan het niet meer gewijzigd worden
+
+var placeholders zodat we waardes kunnen vervangen, maar het gedrag hetzelfde laten
+
+console.log(naam *24) -> wordt in console uitgedrukt, voor programmeurs voornamelijk
+
+bij javascript ; optioneel.
+
+-------------
+Git: VSC, version controle systeem
+
+versies bewaren 
+
+Github: site om git mee uit te wisselen, maakt samenwerking mogelijk
+
+Git: lokaal
+Github: online 
+
+maak van folder waar file inzit een repository van
+
+repository: foto maken van versie
+recursief: neemt alle mappen in mappen ook mee. 
+repository heeft een stage, stage komt daadwerkelijk op de foto 
+je moet files op die stage krijgen
+als de goede bestanden op stage staan, dan maak je een commit van. 
+Als je daarna wijzigingen aanbrengt in files, dan heet dat deltas. 
+    deltas zijn veranderingen toz de eerdere commit. 
+    als je dit weer wil meenemen naar commit, dan moet je deze deltas weer op stage krijgen. 
+
+git init: initieren depository -> in folder krijg je een hidden folder .git
+git add: toevoegen aan stage
+git add . : inhoud map toevoegen aan stage
+git commit -m "bericht": commit 
+git status: 
+git log: zien welke foto's er zijn 
+history
+
+Github - origin repository. 
+
+locale git heeft maar 1 origin repository
+master's ook laten verstrengelen 
+
+
+
+verdere wijzigingen pushen na de eerste keer pushen naar github: 
+
+git add .
+git commit -m "bericht"
+git push 
+
+---------------
+Operator: = < > 
+operant: kanten van operator. 4 = 4, 4 is operant
+
+operator
+    arithmic operator: + * / %(restdeling)
+    assignment operator: = ++ (1 bij optellen)
+
+    logische operator: && (and) (of beide true zijn)
+                        || (or) een van de statements moet true zijn
+
+    comparative operator: < > == !=: evalueert tot bolean                         
+
+    assignment op: += optellen huidige waarde 
+
+if statement
+    if(a == 20){
+        functie(0;)
+
+    }else{
+        alert("het is geen 20");
+    }
+
+for loop
+
+    for(let x = 0 ; x < 15 ; x++){
+
+    }
+
+iput id="input1" om input een id te geven zodat het gepakt kan worden
+
+document.getelementbyID("id1").value
+
+wat je input: value
+
+.value om echt de inhoud van input1 te pakken 
+
+innerHTML: iets wat tussen tags staat
+
+document.getElementByID("output").innerHTML = "Welkom " + voornaam -> om je output op je site te krijgen
+
+--------------
+github: altijd 1 founder. collaborators oneindig
+
+alleen de founder doet git init (initieren repository)
+
+founder maakt ook .gitignore 
+    daarin zet je filenaam die je niet in je repo wil (bijv. geheim.txt)
+
+git add . 
+git commit -m ""
+
+daarna op github online repo maken
+
+git remote add origin... 
+
+git push origin main
+
+----------
+collaborator
+
+link van git repo, 
+
+git clone link
+
+-------
+eenrichting in github
+
+niet werken op master branche, 
+
+maak een nieuwe branche aan om t ewerken
+    git checkout -b nieuwebranchenaam
+
+
+branche maken, en uploaden," U" eenrichtingsverkeer, mag zonder communiceren
+
+" O " moet communiceren, en begint rechtsboven (bij master branch die je download)
+
+omgekeerde L, als iemand anders een pullrequest heeft gedaan
+---------
+
+
+git branch master om te pullen
+
+
+git checkout fmichael
+git merge master
+
+
+---------
+git add .
+git commit -m "bericht"
+-----------------------
+Mergen eigene branch met master branch: 
+
+git checkout master
+git pull
+git checkout ffelix
+git merge master (in VIM: I is insert messagen, ESC uit insert mode, :wq om terug naar commandline te gaan )
+-----------------------
+git push
+
+(bij conflict, conflict oplossen
+
+git add.
+
+git commit 
+
+git push)
+
+-> pull request op github (Eigen branch, contribute 
