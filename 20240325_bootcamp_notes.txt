@@ -1,0 +1,176 @@
+YC Notities 25 maart 2024
+
+ISTQB
+
+**Fundamentals of Testing
+    - is een proces met verschillende activiteiten
+        zoals planning, analyzing, designing, implementing, reporting, evaluating
+
+    Doel: work products evalueren
+      - kan van alles zijn: requirements, user stories, design, code.
+      - vertrouwen krijgen in test objects
+      - defects en failures vinden en voorkomen
+
+      - informatie verschaffen aan stakeholders
+      - geen inadequate software kwaliteit leveren
+      - comply met regelgeving (legal, contractual)
+
+**Testing en debugging
+      - twee verschillende dingen
+
+    confirmation testing: checken of debug activiteit succesvol is
+
+**Contributions to succes
+    - testers vroeg betrekken om eerder fouten te kunnen ontdekken
+
+**Quality assurance and testing 
+    - QA: provide confidence that appropriate levels of quality will be achieved supports proper testing 
+    - QC: various activities
+
+**Errors, defects and failures 
+    - Error introduces by a person, leads to defect, may cause failure 
+    - failures can also be caused by environmental conditions 
+
+    - Causes errors (mogelijke examenvraag)
+        - time pressure
+        - human fallibility
+        - inexperienced or insufficiently skilled project participants 
+        - miscommunication between project participants 
+            about requirements and design etc.
+        - complexity of the code, design, architecture, problem, technology used
+        - misunderstatings about intra-system, inter-system interfaces, esp. when there are many interactions
+        - new, unfamiliar technologies 
+
+        Not all unexpected test results are failures
+          - false positives
+          - false negatives 
+
+    - Root cause (mogelijk examentopic)
+        - earliest actions or conditions that contribute to creation of defects 
+            - bijv tijdsdruk, onervaren personeel 
+
+**Seven testing principles (moet kennen en herkennen)
+    - Offer general guidelines common for all testing 
+
+        1. Testing shows the presence of defects, not their absence.
+              Reduces probability of undiscovered defects, maar is niet 100% proof dat alles correct is 
+        2. Exhaustive testing is impossible.
+              testing everything is not feasible 
+              -> risk analysis, test techniques, priorities should be used to focus test efforts 
+        3. Early testing saves time and money
+            (shift left: early testing)
+            - statisch testen: code runt niet, bij requirement testen (requirements systemen, handleidingen testen, code testen zonder te runnen)
+            - dynamisch testen: code runt wel 
+            - early testing beperkt kosten
+        4. Defects cluster together
+            - small number of modules usually contains most of the defects or is responsible for moest of operational failures. 
+            - Risk analysis to focus test efforts
+                -predicted defect clusters (eerst voorspelling doen)
+                - actual observed defect clusters (dan kijken wat er uitkomt)      
+        5. Pesticide paradox
+              - If same tests are repeated over and over, then no new defects are found 
+                -To find new defects, new tests need to be written, and or changed 
+                - regressie testen: oude testen uitvoeren om te comfirmen dat oude bugs nog steeds weg zijn 
+        6. Testing is context dependant
+              - Testing is done differently in different contexts.
+        
+        7. Absence of errors is a fallacy
+              - Onmogelijk om alles te testen
+                  Software kan bijv. ook moeilijk te gebruiken zijn
+      
+**FUndamental test process
+    - No universal software test process
+        but there are common sets of test activities
+    
+    - Test strategy discussion 
+        - which test activities
+        - how activities implemented
+        - when activities occur
+
+-------------------------------------
+Presentatie
+  - Wie zijn wij
+  - Doel 
+  - Concept 
+  - Waar aan gewerkt (als rol)
+  - Storyboard laten zien 
+  - Klassendiagram laten zien 
+  - Sitemap
+  - Wireframe 
+  - Styleguide 
+  
+  - Waar aan gewerkt (als devops)
+  - Backend 
+  - Frontend (demo?)
+  - landingspagina 
+  - loginpagina 
+
+  - Waar aan gewerkt (als devops)
+  - indexpagina (wireframe gebruikt als startpunt)
+  - algemene navigatiebalk (algemeen opgeslagen zodat het door alle paginas aangeroepen kan worden)
+      modifier zodat knoppen anders zijn voor andere rechten
+      code laten zien (JS)
+  - loginpagina (wireframe gebruikt)
+  - login/id vasthoudenheid
+      onthouden dat ie onthoudt dat je ingelogd bent als je naar andere paginas gaat 
+      koppeling naar database
+      id opslaan in localstorage, html query genereren
+        combinatie query en id in localstorage = onthouden 
+  - logout functie 
+      wissen localstorage id (is null), geen nieuwe query
+  - folderstructuur HTML paginas
+      goed afstemmen 
+      bij verplaatsen, de referenties weer checken (CSS JS)
+  - CRUD (create, read, update, delete)
+  - Database en backend container online gezetten
+      Database -> backend -> frontend 
+        container ipv azure?
+  
+  - Waar aan gewerkt (als devops)
+  - pagina bedrijfsprofiel 
+  - python - csv file voor gemiddelde salaris programmeertaal
+
+  - Waar aan gewerkt (devops)
+  - User story 
+  - csv uitgelezen met python pandas
+      omgevormd naar JSON en verstuurd naar frontend
+      gemaakt met flask endpoints
+      getoond op html frontend 
+  
+  - Waar aan gewerkt (JAVA)
+  - backend 
+  - welke story
+  - code java 
+  - frontend 
+      invullen frontend -> verstuurd naar backend -> aangemaakt op frontend 
+        in frontend kleur veranderen bij vervullen vacature? 
+
+  - foto uploaden (vierkant)
+
+  Waar aan gewerkt (lowcode)
+  - database bouwen (json naar database)
+      kopie van ander database, dus losser aanpassingen
+        welke aanpassingen? krijg je nog aanpassingen mee van andere database?
+  - match maken 
+  - outsystems 
+  
+---------------------------------------
+**Bootstrap
+
+    - Design library
+    - Components: popup, cards, accordeon (html, css, JS)
+    - Kan invulvelden maken 
+    - Grid system (om pagina responsive te maken)
+
+    *Components 
+        - HTML onderdeel (bijv. table, div, img)
+        - gestyled dmv classes
+
+
+        - Op bootstrap site 
+            - Modal: voor popup
+            - Navbar (sticky)
+            - Check radio 
+            - Grid: class= "container", div class= "col-12" (100%), col-12 col-md-4 (op medium devices)
+            - text-end (rechts uitlijnen)
+            - Carousel: uitgelichte bar 
