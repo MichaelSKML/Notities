@@ -1,0 +1,59 @@
+YC notes - 2 april 2024
+
+**ISTQB 
+
+  *Review Process 
+    - informal or formal 
+        - formaliteit hangt af van verschillende factoren.
+
+    *Formal review:
+      - author: ontwikkelaar van product
+
+    *Review types: goal is to uncover defects 
+      - Informal
+      - Walkthrough: scribe verplicht
+      - Technical review: reviewers are tech. peers indiv. prep. is required. scribe verplicht (ideal not author). logs and reviews are produced.
+      - Inspection: defined process, clearly defined roles mandatory, specied entry and exit criteria. author no additional roles. reports and logs are produced, metrics data collected > used to improved. 
+
+      *Applying review techniques
+        - Ad hoc
+        - Checklist-based
+        - Scenarios and dry runs
+        - Role-based
+        - Perpective-based
+
+      *Organizational Success (!)
+        - Each review: clear objectives
+        - Applied review types: suitable to achieve objectives, appriopriate to the type and level of software WP. 
+        - Review techniques are suitable. 
+
+        - Adequate time and adequete notice to prepare for review contribute to success. (!)
+        - Management supports review process. 
+
+      *People-related success factors
+        - Right people are involved. 
+        - Testers seen as valued reviewers.
+        - Adequate time and attention to detail dedicated by particip.
+        - Small chunks
+        - Objective handling of defects 
+        - well-managed meeting
+        - Trust atmosphere
+        - No weird behaviors (hostile, boredom)
+        - Adequate training is provided
+        - Learning and process improvement culture promoted. 
+
+      Question 4 (?): B, in andere antwoorden zitten elementen van dynamic testing in. 
+
+      *Test design techniques 
+        - black box: behaviour-based, kijken naar gedrag (func. en non-func.), kijken naar input en output, maar niet naar interne structuur (!). Coverage based on items tested and techniques
+        - white box: kijken naar code, architec. interne structure
+        - experience based: combined w/ white and box, test tech op zichzelf, gebaseerd op XP van devs, testers, users, stakeholders (environment, likely defects, distribution clusters)
+
+      *Black box techniques (kijken naar gedrag):
+        - Equivalence partitioning: 
+            - 
+        - Boundary value analysis: 
+            - partition is ordered 
+            - boundary values(min max van grens)
+            - om te kijken of grens gevallen goed gedragen
+    

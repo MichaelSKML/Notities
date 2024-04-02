@@ -1,0 +1,414 @@
+***ISTQB***
+
+*Chapter 1: The Fundamentals of Testing
+
+    Learning ojectives: 
+      - What is testing?
+          1. Identify typical objectives of testing.
+          2. Differentiate testing from debugging.
+      
+      - Why is testing necessary?
+          1. Give examples of why testing is necessary.
+          2. Describe the relationship between testing and quality assurance and give examples of how testing contributes to higher quality.
+          3. Distinguish between error, defect, and failure.
+          4. Distinguish between the root cause of a defect and its effects.
+      
+      - Seven testing principles:
+          1. Explain the seven testing principles.
+      
+      - Test process:
+          1. Explain the impact of context on the test process.
+          2. Describe the test activities and respective tasks within the test process.
+          3. Differentiate the work products that support the test process.
+          4. Explain the value of maintaining traceability between the test basis and test work products.
+
+      - The Psychology of Testing:
+          1. Identify the psychological factors that influence the success of testing.
+          2. Explain the difference between the mindset required for test activities and the mindset required for development activities.
+    ---------------------------------------------------------------------------------------------
+
+    *What is testing?
+      - Software testing is a process and includes many different activities:
+          - Test planning
+          - Analyzing, designing, implementing tests
+          - reporting test progress and results 
+          - evaluating the quality of a test object (goal)
+    
+    *Typical objectives of testing:
+      - To evaluate work products such as requirements, user stories, design, and code
+      - To verify whether all specified requirements have been fullfilled
+      - To validate whether a test object is complete and works as the users and stakeholders expect
+      - To build confidence in the level of quality of the test object 
+      - To prevent defects 
+      - To find failures and defects 
+
+      - To provide sufficient information to the stakeholders to allow them to make the right decisions (regarding the level of risk and quality of test object, important)
+      - To reduce the level of risk of inadequate software quality 
+      - To comply with contractual, legal, regulatory requirements or standards, or verify the compliance of test object to the regs. 
+
+    *Difference between testing and debugging: 
+      - Executing tests: show failures caused by defects in the software. (observing the behaviour)
+      - Debugging: development activity that finds, analyzes (the cause of defects), and fixes such defects.
+
+        Subsequent confirmation testing checks if the fixes resolved the defects. 
+    ------------------------------------------------------------------------------------
+
+    *Why is testing necessary?
+      - Reduce risk of failures by testing
+      - Detecting and fixing defects contribute to the quality of product
+      - Testing may be required to meet contractual, legal, or specific standards
+
+    *Testing's contribution to success:
+      - Testers involved in requirements review or user story refinement -> detect defects in work products (prevent)
+      - Testers and system designers work closely together during designing -> increase understanding of the design and how to test it
+      - Testers and developers work closely together during code development -> " " of the code and how to test it
+      - Testers verify and validate software prior to release -> detect failures that may otherwise have been missed, debugging.
+
+    *Quality Assurance and Testing:
+      - Quality management includes quality assurance and quality control. 
+      - Quality assurance: focused on adherence to proper processes -> to provide confidence that appropriate levels of quality is achieved. 
+          -> QA supports proper testing 
+      - Quality control involves various activities, including test activities -> to support achievement of levels of quality. 
+
+    *Errors, defects, and failures:
+      - Error (mistake, can be human) leads to defect, may cause failure. 
+          failures can be caused by human error, but also environmental conditions. 
+      
+        - Errors: many reasons, like time pressure, human fallibility, inexperience, miscommunication/misunderstanding, complexity of product. 
+        - Failures: false positives/false negatives
+
+        - Root cause of defect: earliest actions/condition that contributed to defect. 
+            identify root causes to analyze/reduce/prevent similar defects
+
+    ----------------------------------------------------------------------------------------
+    *Seven Principles of Testing
+      - Offer general guidelines common for all testing.
+
+      1. Testing shows the presence of defects, not their absence.
+            - cannot prove that there are no defects.
+            - testing reduces the probability of undiscovered defects. 
+            - if no defects are found, that doesn't mean it's a proof of correctness.
+      2. Exhaustive testing is impossible.
+            - testing everything (all imputs and preconditions) not feasible, 
+            - focus of test effort should be on risk analysis, test techniques, priorities.
+      3. Early testing saves time and money.
+            - both static and dynamic test activities should be started as early as possible in software dev. lifecycle.
+            - early testing aka shift left. 
+            - reduces costly changes 
+      4. Defects cluster together. 
+            - a small number of modules usually contains most of the defects discovered/responsible for most operational fails 
+            - test effort focus on predicted defect clusters and the actual observed defect clusters. 
+      5. Beware of the pesticide paradox.
+            - repeated same tests will eventually no longer detect new defects.
+            - to detect new defects: change/write new tests 
+            - (automated) regression testing to check if old defects are still present. 
+      6. Testing is context dependent. 
+            - testing is different in other contexts: protocol, or agile/waterfall setting. 
+      7. Absence-of-errors is a fallacy. 
+            - doesn't ensure success of system. 
+            - impossible to test and find all defects. 
+            - a system can still be difficult to use, not meet expectations/needs, inferior. 
+
+    -----------------------------------------------------------------------------------------------
+    *Test Process
+      - No universal software test process. 
+
+      - Test process: common sets of test activities resulting in the likeliness of achievement of established objectives. 
+          - proper and specific software test process in any situation depends on many factors. 
+      
+      - Test strategy: what are the goals of project?
+          - which test activities are involved in this test process?
+          - how are these activities implemented?
+          - when will these activities occur? 
+      
+      - Contextual factors affecting the test process: 
+          - lifecycle model and methodologies used in software development.
+          - considered test levels and test types. 
+          - product and project risks.
+          - business domain.
+          - operational constraints: budget/resources, timescales, regulation. 
+          - organizational policies/practices.
+          - required internal and external standards 
+          - execution of tests by customers or developers. 
+      
+
+    *Test Activities and Tasks 
+      - Test planning: activities that define objectives of testing and approach for meeting objectives within contraints context.
+
+      - Test monitoring and control:
+          - Test monitoring: on-going comparison of actual progress against test plan. (lopen we op schema?)
+          - Test control: taking action necessary to meet objectives of test plan (can be updated over time)
+          - Monitoring and control: supported by evaluation of exit criteria (definition of done)
+
+      - Test analysis: 
+          - Analysis of test basis to identify testable features -> define test conditions. 
+          - Answers "what to test?".
+
+      - Test design: 
+          - Elaborate test conditions into high-level test cases and other testware.
+          - Answers "how to test?".
+
+      - Test implementation: 
+          - Creation of testware necessary for test execution (including sequencing test cases into procedures)
+          - Answers "do we have everything ready to run the test?".
+
+      - Test execution:
+          - During this, test suites are run in accordance with execution schedule. 
+
+      - Test completion: 
+          - Collect data from completed activities. (en inzichtelijk maken)
+          - Hoe kunnen we test process verbeteren/welke tests kunnen gebruikt worden in andere projecten?
+
+    *Test Work Products: 
+      - artifacts generated during test process.
+      - involved in evaluation of test coverage (scope van alle mogelijke test, bereik je alle mogelijkheden?)
+          - important for traceability between test base and work products. 
+
+              traceability supports:
+                - analyzing the impact of changes
+                - making testing auditable
+                - meeting IT governance criteria 
+                - improving understandability of test progress reports
+                - relating tech info to stakeholders
+                - assessment of product quality, capability, progress project against business goals. 
+  
+  ------------------------------------------------------
+    *Psychology of Testing 
+      - Testing involves humans -> so psych has effects on testing. 
+
+      - Communicate well: collaboration, focus on benefits of testing, don't criticize, understand others. 
+
+  --------------------------------------------------------
+  *Testing throughout the Software Life Cycle
+
+    *Software Development Lifecycle Models:
+      - describes the types of activity performed at each stage 
+      - and how activities relate to each other logically and chronologically.
+
+      - different lifecycle models require different testing approaches. 
+
+      - Software dev. lifecycle models (v-model, agile model) may be combined. 
+    *Common software dev. lifecycle models: 
+      - Sequential dev. models (watterfall)
+          - deliver complete set of features
+          - require months/years for delivery to stakeholders/users 
+    
+      - Iterative and incremental dev. models: 
+          - incremental development in pieces: features grow incrementally.
+          - development (alles stappen) in series of cycles, fixed duration of cycle (agile/scrum)
+
+  *Characteristics of good testing:
+    - Every development activity has a corresponding test activity. 
+    - Each test level has specific test objectives. 
+    - Test analysis and design for each test level. 
+    - Early involvement of testers -> discussions to define/refine requirements and design.
+    
+    - Test activities should start in the early stages of the lifecycle.
+    - Early testing. 
+
+  *V-Model (!)
+    - Afbeelding bekijken voor details. 
+
+---------------------------------------------------------
+  *Test Levels: different stages/phases of testing to ensure quality of product.
+    - Component/Unit testing
+    - Integration testing
+    - System testing
+    - Acceptance testing 
+
+    *Test levels are characterized by attributes:
+      - specific objectives 
+      - test basis (to derive test cases)
+      - test object (what is being tested?)
+      - typical defects/failures
+      - specific approaches and responsibilities
+-------------------------------------------------------
+      *Component testing objectives 
+        - reducing risk
+        - verifying if functional and non-functional behaviors of components are as designed/specified.
+        - building confidence in components product. 
+        - finding defects in component. 
+        - preventing defects from creeping into higher test levels. 
+
+      *Examples workproducts used as test basis for component test:
+        - detailed design 
+        - code 
+        - data model 
+        - component specs. 
+
+      *Examples test objects 
+        - components/units/modules
+        - code/data structures
+        - classes
+        - database modules 
+
+      *Examples defects/failures 
+        - Incorrect functionality
+        - data flow problems
+        - incorrect code/logic 
+      
+      *Responsibility of component testing
+        - Testing is usually performed by developer who wrote the code. 
+        - Need access to code to test. 
+-------------------------------------------------------------
+      *Integration testing objectives 
+        - Verifying if functional and non-functional behavior of the interfaces are as designed and specified.
+        - " " of interfaces 
+
+      *Examples WP used as test basis for integration testing:
+        - software/system design 
+        - sequence diagrams
+        - interface/communication protocol specs.
+        - use cases 
+        - architecture at unit or system level 
+        - workflows 
+        - external interface definitions. 
+      
+      *Examples test objects for int. testing:
+        - subsystems
+        - databases
+        - infrastructure
+        - interfaces 
+        - API's 
+        - microservices
+      
+      *Examples defects/failures (component integration):
+        - incorrect/missing data/incorrect encoding
+        - incorrect sequencing/timing interface calls
+        - interface mismatch
+        - failures in communication between units 
+        - improperly handled communication failures 
+        - incorrect assumptions about meaning, units, data, between units. 
+
+      *Examples defects/failures (system int.)
+        - Inconsistent message structure between systems 
+        - Failure to comply with security regs. 
+        - "  " 
+
+      * Responsibility of integration testing: 
+        - Component int. testing: by developers 
+        - System int. testing: by testers 
+
+        Incremental integration: increase detection defects early and defect isolation. 
+----------------------------------------------------------
+      *System testing objectives:
+        - " "
+
+      *Examples WP used as test basis for system test. 
+        - System/software requirement specs (funcional and non-func.)
+        - Risk analysis reports
+        - Use cases 
+        - Epics/user stories 
+        - Models of system behavior 
+        - State diagrams 
+        - system and user manuals 
+
+      *Examples test objects for Sys test.
+        - Applications
+        - Hardware/software systems 
+        - Operating systems 
+        - system under test 
+        - sys config and config data. 
+
+      *Examples defects/fails:
+        - Incorrect calculations 
+        - incorrect/unexpect. behaviors 
+        - incor. control/data flows 
+        - failure end to end functionality tasks. 
+        - failure system in prod. environ. 
+        - not working as described in manual. 
+
+      *Responsibility of sys test.
+        - Testing by independant testers 
+
+        - Defect in specifications -> disagreements about expected behavior.
+          - may cause false pos and false neg.
+          - early involvement testers in user story refine or statis test. activ. -> reduce defects in spec. 
+
+-------------------------------------------------------------
+      *Acceptance testing objectives
+        - Onderzoeken of system het probleem van bedrijf/eindgebruikers oplost.
+        - Verifying specification of func. and non-func. behavior. 
+
+      *Examples WP used as test basis in acceptance testing: 
+        - processes, requirements, regulations, use cases, reports. 
+
+      * " "  for operational acceptance testing 
+        - backup and recovery procedures, regs. 
+
+      *Examples test objects 
+        - System under test 
+        - system config (data)
+        - recovery systems and hot sites 
+        - operational/maintenance process.
+        - forms/reports/existing prod. data. 
+
+      *Examples defects
+        - workflows do not meet user requirements 
+        - business rules not implemented correctly
+        - does not meet contractual or regulatory reqs.
+        - non-functional fails: 
+            - security vulnurabilities
+            - wack performance under high loads 
+            - improper operation on a supported platform. 
+      
+      *Responsibility:
+        - testing by customers, business users, prod. owners, operators system, stakeholders. 
+
+-------------------------------------------------------------------------
+  *Test Types 
+    - group of test activities based on specific test objectives such as;
+        - Evaluating functional quality characteristics (completeness, correctness, apprioprate)
+        - " " non-functional qual. char. (reliability, efficiency, security, compatibil., usability)
+        - " " structure of system is correct/complete and as specified. 
+        - " " effect of changes (confirmation testing, regression testing)
+
+--------------------------------------
+  *Functional testing of system: 
+    - involves tests that evaluate functions that system should perform 
+    - what the system should do 
+
+  *Non-func. testing of system: 
+    - evaluates char. of systems and software:
+      - usability, performance efficiency, security. 
+      - how well the system behaves. 
+  
+  *White-box testing (ziet code)
+    - derives tests based on systems internal structure or implementation 
+      - internal structure: code, architecutre, work flows, data flows in system. 
+
+  *Black-box testing (zien alleen gedrag)
+    - examining functionality without knowledge of internals/seeing source code. 
+
+  *Change-related testing 
+    When system is changed, testing to 
+      - confirm correct implementing of changes (confirmation testing)
+      - see if there are no unexpected consequences (regression testing)
+-------------------------------------------------------------
+  *Maintenance Testing (in delivered software)
+    - To fix defects, add new funct. delete/alter funct. improve non-func quality char. 
+
+    - Scope of maint. test. depends on: 
+      - degree of risk of change. 
+      - size of system and of change. 
+    
+    *Triggers for maintenance:
+      - Modification
+      - Migration
+      - Retirement 
+    
+    *Impact analysis difficult for maintance test if 
+      - out of date or missing specs, documentation, test cases, traceability, tool support, knowledge
+
+--------------------------------------------------------------------
+  *Test Design Techniques 
+    - Help to identify test conditions, test cases, test data 
+
+    - Test techniques:
+      - black-box 
+      - white-box
+      - experience-based 
+
+------------------------------------------------
+  
+

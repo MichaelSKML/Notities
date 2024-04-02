@@ -1,0 +1,107 @@
+YC notes - 28 maart 2024 (sprint review, ISTQB, containers)
+
+**ISTQB - Vervolg 
+
+  Fundamental Test Process 
+    -Test strategy
+    -Test process wordt beinvloed door contextual factors
+        contextual factors: business domain, etc etc.
+
+    - Termen kennen met het woord "test" (test activities etc)
+
+    Test monitoring and control: lopen we op schema van planning (monitoring)? En actie ondernemen (control)
+      bepaalt exit criteria (doorgaan naar volgende stage)
+
+    Test basis: alle gegevens die over het product bekend zijn waaruit je testen kan halen (interviews met klanten, documenten, wetgeving, natuurkunde)
+      test basis breder dan domainkennis
+      daaruit testable features halen.
+    
+    Test design: na analyse, hoe gaan we het testen 
+
+    TEst implementatie: hebben we alles om de test te runnen? 
+
+    Test execution: uitvoeren van test 
+
+    test completion: data collecten na testen en inzichtelijk maken voor anderen. 
+
+  *Test work products:
+    Test coverage: scope van alle mogelijke tests, bereik je alle mogelijkheden?
+      belangrijk voor traceability tussen basis en work products 
+  
+    confirmation testing: dat wat ik wilde wijzigen, is dat ook gewijzigd?
+    regression testing: iets gewijzigd, is er onbedoeld iets anders dat niet meer goed werkt?
+
+  *Psychologie van testen
+    - Human psych invloed op software testen 
+        - mag niet leiden tot vijandigheid (bijv als je fouten vindt bij een ander)
+        - bewust zijn daarvan 
+        - communicatie hierin belangrijk 
+
+  *Software life cycle 
+    - V-model: test levels, 
+    - Verschil tussen agile en waterfall model 
+    - V-model komt bij beide voor,
+    - V-model: bovenste level door klant (requirement specification)
+        functional specification: IT-bureau verantwoordelijk die opdracht aanneemt 
+        technical specification: architecten van onderdelen/componenten verantwoordelijk 
+        program specification: developers verantwoordelijk 
+
+        tester helpt mee om te specificeren, vroeg betrokken, om de testbaarheid concreter te maken
+  
+  *Test types: groep van activiteiten, gebaseerd op een specifiek test Doel
+    -functional testing 
+    -non-functional testing 
+    -white box testing 
+    -black box testing 
+    - change related testing 
+
+  *maintenance testing 
+      - retirement: hoeft niet hele app te zijn, maar kan ook een module van app zijn 
+
+  *static testing: testen wanneer code nog niet runt 
+    - manual examination (reviews bijv.)
+  
+
+  slide 115 break 
+
+  Code coverage: hoeveel van broncode raak ik 
+    twee soorten: 
+      statement coverage: 
+        stap 1: wat zijn alle executable statements? (statement die een var beschrijft of uitleest) 4 5 8 12 in psuedo code voorbeeld
+
+        decision coverage: of alle code wordt geraakt, met hoeveel use cases?
+
+-------------------------------
+**ASK ME ANYTHING
+
+  Gemeenschappelijke elementen van 
+
+
+---------------------------
+DOCKER
+
+start stop run en build commandos goed uit elkaar houden
+
+container: omgeving met image (cdrom) waar computer opzit 
+
+start: aanzetten container
+stop: uitzetten container 
+run: installeren image 
+build: maken van "cd rom"/image
+
+docker run -dit nginx: terminal terug, maar image runt nog wel (detached mode)
+
+docker run -dit -p 5577:80 nginx (dan kan je container zien), 5577 is localhost, 80 is de port die nginx gebruikt
+
+docker build . op map waar Dockerfile in staat en html bestand, dan bouwt ie je html in host
+
+in dockerfile moet het volgende instaan (src kan weg): 
+
+FROM nginx:1.10.1-alpine
+COPY src/html /usr/share/nginx/html
+
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
+CMD nginx
+
+zie ook http://lms.codefounders.nl/lessonModuleDetail/69(sidebar:tags/dock)
