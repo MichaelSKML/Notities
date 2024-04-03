@@ -56,4 +56,6 @@ YC notes - 2 april 2024
             - partition is ordered 
             - boundary values(min max van grens)
             - om te kijken of grens gevallen goed gedragen
-    
+
+------------------------------------------------------
+ *  

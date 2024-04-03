@@ -1,0 +1,16 @@
+**
+
+  *Equivalence partitioning
+
+  *Boundary Value Analysis 
+    - Extension of equivalence partitioning
+    - partition must be ordered 
+    - min en max of boundary
+
+  *Decision table
+    - alle mogelijkheden en uitkomsten in tabel zetten voor overzicht 
+
+
+  *State transition diagram
+    - State table 
+    - State diagram
