@@ -1,0 +1,35 @@
+YC notes - 8 april 2024
+
+*database in mysql workbench aangemaakt voor de andere klassen (ingredienten/tags/etc.)
+  - aangevuld met dummy data
+
+  - om inhoud van bestaand tabel te wissen: DELETE from tabelnaam WHERE VALUE is TRUE
+  - primary key (id) telt door, ook al is inhoud gewist, dus begint niet meer bij 1.
+
+*koppeling van database naar recept.html
+  - in backend connectie met mysql 
+  - functie met query naar mysql +gid zodat data van specifiek recept wordt opgehaald 
+
+  - in frontend data opgehaald en getoond:
+
+  <script>
+			function haalreceptdetailsop(){
+							console.log("dit zijn de receptdetails");
+							fetch(backendurl+"/receptdetails/"+paramValue).then(r=> r.json()).then(d=>toonreceptdetails(d))
+
+							}
+					haalreceptdetailsop();		
+		</script>
+
+		<script>
+
+			function toonreceptdetails(d){
+
+			document.getElementById("titelgerecht").innerHTML=d[0].naam                   -> titelgerecht = div id, .naam = json/kolomnaam in sql tabel. 
+			document.getElementById("beoordeling").innerHTML=d[0].aantalsterren
+			}
+		</script>
+
+
+  *Via mySQL innerjoin de tabellen recept en ingredienten combineren (foreign key), uitzoeken en implementeren.
+
