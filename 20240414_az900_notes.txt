@@ -1,5 +1,110 @@
 ***AZ-900***
 
+  **Describe cloud computing
+
+    - Microsoft Azure: cloud computing platform. 
+
+    - Cloud computing: Delivery of computing services over the internet.
+      - Includes: virtual machines, storage, databases, networking.
+      - Delivery over internet -> not constrained by physical infrastructure.
+        - Easy expansion.
+---------------------------------------------------------------------------------
   
+  **Describe the shared responsibility
+    
+    - Responsibility shared between cloud provider and consumer
+      - Maintanance, security, infrastructure, software.
 
+    - Cloud provider responsible for:
+      - Physical security, power, cooling, network connectivity
 
+    - Consumer responsible for: 
+      - The data and information stored in the cloud. 
+      - Access security
+
+    - Responsibility depends on the situation/cloud service types.
+
+    *Cloud service types (X as a service):
+      - Infrastructure (consumer most responsibility)
+      - platform (middle ground)
+      - software (cloud provider most responsibility)
+
+      *Service model determines responsibility of:
+        - Operating systems
+        - Network controls
+        - Applications
+        - Identity and infrastructure
+
+      *Cloud provider always responible for:
+        - physical datacenter, phys. network, phys. hosts
+
+      *Consumer always responsible for:
+        - Information/data stored in cloud, allowed devices, accounts/IDs of people, services, devices within org. 
+---------------------------------------------------------------------------------
+
+  **Define cloud models
+
+    *Cloud models define the deployment type of cloud resources. 
+      - Three main cloud models: private, public, hybrid. 
+
+    * Private cloud 
+      - Cloud used by a single entity.
+      - Provides greater control for the company/IT dep. 
+      - But greater costs, fewer benefits of public cloud deploy. 
+      - May be hosted from on-site datacenter or dedicated off-site datacenter
+        - Even by a third party datacenter. 
+      
+    * Public cloud
+      - Built, controlled, maintained by third party cloud provider. 
+      - Accessible by anyone that wants to purchase cloud services. 
+      - Key difference between private and public clouds: general public availability.
+
+    * Hybrid cloud 
+      - Computing environ. that uses both public and private clouds: inter-connected environment. 
+      - Can be used to allow private cloud to surge for increased, temp. demand by deploying public cloud resources.
+      - Can provice extra layer security -> Users can choose which services to keep in public cloud, which in private. 
+
+    * Multi-cloud 
+      - User chooses multiple public cloud prov. for different reasons (like different features bijv.)
+      
+    * Azure Arc
+      - Set of technologies that helps managing your cloud environ. (for all models)
+    
+    * Azure VMware Solution
+      - Lets you run your VMware workloads in Azure. 
+-----------------------------------------------------------------------------------
+
+**Describe consumption-based model
+
+  * Capital expenditure vs operational expenditure: kopen (niet dynamisch) vs huren (dynamisch in up of downscalen)
+
+-------------------------------------------------------------------------------------
+
+** Describe core architectural components of Azure 
+
+  * Accounts 
+      Subscriptions
+        Resource groups
+          Resources 
+
+** Azure physical infrastructure 
+    
+  *Physical infrastructure
+    - Datacenters around the world (Azure is a global cloud provider)
+      - Grouped in Azure Regions/Azure Availability Zones
+        -> Designed to help achieve resilience and reliability
+    
+    * Regions
+      - Is a geographical area on the planet that contains at least one or more datacenters that are nearby and networked together with a low-latency network 
+        - When deploying a resource you need to choose region. 
+        *Some VM features or services only available in certain regions. Some global features don't need regions. 
+    
+    * Availability zones 
+      - Physically separate datacenters within an Azure region. 
+        - One or more datacenters equipped with independant power, cooling, networking. 
+        - A. zones set up to be an isolation boundary. 
+        - Zones connected through high-speed, private fiber-optic networks. 
+        * To ensure resilience, minimum three separate A. zones are present in A. zone-enabled regions. 
+          Not all regions currently support A. zones. 
+
+    
